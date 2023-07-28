@@ -1,0 +1,64 @@
+type: picture-elements
+image: /local/all-levels.png?5assd
+elements:
+  - type: image
+    entity: input_boolean.mute_announcements
+    image: /local/u_study_up.png
+    state_image:
+      'on': /local/u_study_up_on.png
+      'off': /local/u_study_up_off.png
+    tap_action:
+      action: toggle
+    style:
+      left: 74%
+      top: 73.55%
+      width: 10%
+  - type: image
+    entity: binary_sensor.zone_front_gate_open
+    image: /local/t.png?v
+    state_image:
+      'on': /local/site-gate-open.png
+      'off': /local/t.png?v
+    tap_action:
+      action: toggle
+    style:
+      left: 90%
+      top: 8%
+      width: 2.5%
+  - type: image
+    entity: binary_sensor.zone_side_gate_open
+    image: /local/t.png?v
+    state_image:
+      'on': /local/site-gate-open.png
+      'off': /local/t.png?v
+    tap_action:
+      action: toggle
+    style:
+      left: 91%
+      top: 51%
+      width: 2.5%
+  - type: icon
+    entity: alarm_control_panel.partition_home
+    icon: mdi:security
+    style:
+      left: 5%
+      top: 60%
+    tap_action:
+      action: call-service
+      service: input_button.press
+      target:
+        entity_id: input_button.arm_home
+  - type: icon
+    entity: camera.alfred_st_doorbell
+    icon: mdi:cctv
+    style:
+      top: 15%
+      left: 66%
+      width: 5%
+  - type: icon
+    entity: camera.alfred_st_entry
+    icon: mdi:cctv
+    style:
+      top: 12%
+      left: 85%
+      width: 5%
